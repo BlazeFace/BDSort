@@ -4,7 +4,7 @@
 public class Main {
     public static void main(String[] args){
         Kink k = new Kink("Entry");
-      //  k.display();
+       // k.display();
         Kink f = new Kink("Entry2");
        // f.display();
         Relationship perf = new Relationship(k,f);
