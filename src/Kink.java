@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 public class Kink {
     public ArrayList<Trait> vals = new ArrayList<>();
-    public ArrayList<String> types = new ArrayList<>();
+    public static ArrayList<String> types = new ArrayList<>();
     public int threshold;
     public Kink(String filename) {
         try (BufferedReader filein = new BufferedReader(new FileReader(filename))) {
