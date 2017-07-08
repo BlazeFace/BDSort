@@ -3,6 +3,7 @@
  */
 public class Main {
     public static void main(String[] args){
+        Kink.buildType("Entry");
         Kink k = new Kink("Entry");
         //k.display();
         Kink f = new Kink("Entry2");

@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Kink {
     public ArrayList<Trait> vals = new ArrayList<>();
     public static ArrayList<String> types = new ArrayList<>();
-    public int threshold;
+    //public int threshold;
     public Kink(String filename) {
         try (BufferedReader filein = new BufferedReader(new FileReader(filename))) {
             String line = filein.readLine();
@@ -22,12 +22,14 @@ public class Kink {
             }
             filein.close();
         } catch (Exception e) {
-            System.out.print("No lines to read");
+            System.out.print("");
         }
-        this.buildType(filename);
-        Collections.sort(vals);
         Collections.sort(types);
-        this.threshold = compAvg();
+        Collections.sort(vals);
+       /* for(int i = 0; i < vals.size(); i++){
+            System.out.println(vals.get(i) + types.get(i));
+        }
+     */   //this.threshold = compAvg();
     }
 
     private int compAvg() {
@@ -42,13 +44,13 @@ public class Kink {
         for (int i = 0; i < vals.size(); i++) {
             System.out.print(vals.get(i));
         }
-        System.out.print(" Your Average Value is "+threshold);
+        //System.out.print("Your Average Value is "+threshold);
     }
     public ArrayList returnCont(){
         return vals;
     }
-    private void buildType(String filename) {
 
+    public static void buildType(String filename) {
         try (BufferedReader filein = new BufferedReader(new FileReader(filename))) {
             String line = filein.readLine();
             while (line != null) {
